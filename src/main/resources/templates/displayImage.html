@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h1>Image Details</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Owner</th>
+            <th>Image</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+            <td th:text='${imageDetail.id}'></td>
+            <td th:text='${imageDetail.imageName}'></td>
+            <td th:text='${imageDetail.imageDescription}'></td>
+            <td th:text='${imageDetail.imageOwner}'></td>
+            <td><img th:src="*{'data:image/jpeg;base64,'+{imageDetail.base64image}}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+</body>
+<script>
+debugger;
+   // var imageBase64 = document.getElementById('imageBase64').value;
+    //console.log(imageBase64);
+//var imagePreview= document.getElementById('imagePreview');
+//if(imagePreview) {
+  //  imagePreview.src = "data:image/jpeg;base64," + imageBase64;
+//}
+</script>
+</html>
